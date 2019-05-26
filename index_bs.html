@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html>
+ <head>
+  <title>Black Swan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="black swan">
+  <meta name="keywords" content="black swan,effect,consulting,education">
+  <meta name="author" content="myalice">
+  <meta http-equiv="refresh"content="30">
+  <style>
+    /*body{
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      background-color:#f2f2f2;
+        }*/
+    *{box-sizing:border-box;}
+    .container{
+               /*background-color:green;*/
+               display: flex;
+               flex-direction:column;
+               height:100px;
+               /*padding-top:10px;*/
+               /*width:1200px;*/
+               border:1px solid white;
+               flex-shrink:1;
+           }
+       .item1_container{
+                 color:black;
+                 height:73px;
+                 background-color: #92B557;
+                 border-bottom:1px solid white;
+                 padding-left:17%;
+                 padding-top:17px;
+                 font-size:34px;
+                 /*flex-shrink: 1;*/
+                 }
+       .item2_container{
+                 color:#d9f2d9;
+                 /*size:100px;*/
+                 /*height:22px;*/
+                 background-color:#c6ebc6;
+                 border-bottom:1px solid white;
+                 text-align:right;
+                 padding-right:30%;
+                 /*border:15px;*/
+                 /*flex-shrink: 1;*/
+                 }
+     .content{
+         display:flex;
+         background-color: white;
+         flex-direction:row;
+         /*position:relative;*/
+            }
+         .item1_content{
+             /*flex-grow:1;*/
+             /*flex-basis:10%;*/
+             /*position:relative;*/
+             margin-left:10px;
+         }
+         .item1_content:nth-child(1){
+             /*flex-grow:4;*/
+             flex-basis: 150px;
+             flex-shrink:1;
+         }
+         .item1_content:nth-child(2){
+             /*flex-grow:4;*/
+             flex-basis: 1000px;
+             flex-shrink:1;
+         }
+         .item1_content:nth-child(3){
+             /*flex-grow:4;*/
+             /*flex-basis: 150px;*/
+             flex-shrink:1;
+         }
+         .content nav{
+             border-right:1px solid #efefef;
+             margin-left:150px;
+             /*padding-left:3%;*/
+             /*flex-basis:10%;*/
+         }
+         .content aside{
+             border-left:1px solid #efefef;
+             /*flex-basis:10%;*/
+         }
+     .footer{
+       background-color:#f2f2f2;
+       /*background-size: cover;
+       background-image: url('image/spring.jpg');
+       background-blend-mode: difference;*/
+       height:50px;
+       font-size:10px;
+     }
+       .item1_footer{
+                 border-top:1px solid white;
+                 text-align: left;
+                 }
+     nav{
+         flex-basis: 50px;
+         flex-shrink: 0;
+     }
+     aside{
+         flex-basis: 50px;
+         flex-shrink: 0;
+     }
+     main{
+         padding:10px;
+         flex-shrink: 0;
+     }
+     ul.item1_content_list li, ol.item1_cont_list li{
+       list-style: none;
+       padding:5px 0px 5px 0px;
+       margin-bottom: 5px;
+       border-bottom: 1px solid #efefef;
+       font-size: 12px;
+       /*animation*/
+       -webkit-transition: background-color 0.3s linear;
+       -moz-transition: background-color 0.3s linear;
+       -ms-transition: background-color 0.3s linear;
+       -o-transition: background-color 0.3s linear;
+       transition: background-color 0.3s linear;
+     }
+     ul.item1_content_list li:hover,
+     ol.item1_cont_list li:hover{
+       background-color: #f6f6f6;
+       cursor:default;
+       /*background-color: #E3F6CE;*/
+     }
+
+     ul.item1_footer_list{
+       list-style:none;
+       text-align:center;
+       padding:0;
+       margin:0;
+     }
+     ul.item1_content_list li:last-child,
+     ol.item1_content_list li:last-child{
+       border-bottom: 0px;
+     }
+     /*ul.item1_content_list li:before,
+     ol.item1_content_list li:before {
+       content:">";
+       display: inline-block;
+       vertical-align: middle;
+       padding: 0px 5px 6px 0px;
+     }*/
+     #topbar{color:white;}
+     #login{color:gray;}
+     #item1-footer_1{padding:12px;}
+  </style>
+ </head>
+ <body>
+   <div class="container">
+     <header class="item1_container">
+     <b><a href="index.html" title="Go to Blackswan Home"
+          style="text-decoration:none" id="topbar">
+              Black Swan</a></b>
+     </header>
+     <header class="item2_container">
+       <a href="login.html"title="Go to Login"
+            style="text-decoration:none" id="login"> login</a>
+    </header>
+   </div>
+   <div class="content">
+     <nav class="item1_content">
+       <ul class="item1_content_list">
+         <li>STR</li>
+         <li>COLUMN</li>
+         <li>MOVIE</li>
+         <li>MUSIC</li>
+         <li>BOARD</li>
+       </ul>
+     </nav>
+     <main class="item1_content">
+       <article>
+       <!--img-->
+       <img src="image/spring.jpg" height="300" alt="봄이미지">
+       </article>
+     </main>
+     <aside class="item1_content">
+        AD
+     </aside>
+   </div>
+   <div class="footer">
+     <footer class="item1_footer" id="item1-footer_1">
+       <UL class="item1_footer_list">
+         <li><a href="privacy.html" style="text-decoration:none" id="policy">개인보호정책</a></li>
+         <li><a href="about.html" style="text-decoration:none" id="intro">회사소개</li>
+       </UL>
+     </footer>
+   </div>
+ </body>
+</html>

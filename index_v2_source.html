@@ -1,0 +1,217 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Black Swan</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="black swan">
+<meta name="keywords" content="black swan,effect,consulting,education">
+<meta name="author" content="myalice">
+<meta http-equiv="refresh"content="30">
+
+<style>
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color:#f2f2f2;*/
+      }
+
+  .container{
+             display: flex;
+             flex-direction: column;
+             width:1200px;
+             border:1px solid white;
+         }
+         a{color:white;}
+         header{
+             color: white;
+             background-color: #00284d;
+             border-bottom:1px solid white;
+             text-align: left;
+             padding-left:150px;
+               }
+         footer{
+             border-top:1px solid white;
+             padding:20px;
+             text-align: center;
+         }
+         .content{
+             display:flex;
+         }
+         .content nav{
+             border-right:1px solid white;
+         }
+         .content aside{
+             border-left:1px solid white;
+         }
+
+         nav,aside{
+             flex-basis: 150px;
+             flex-shrink: 0;
+            }
+
+         main{
+             padding:10px;
+             flex-shrink: 0;
+         }
+         /*filter & hover & transition*/
+         img{
+           transition: all 1s;
+            }
+         img:hover{
+           -webkit-filter: sepia(50%);
+           -o-filter:sepia(50%)
+            filter: sepia(50%);
+            }
+          /*background blend*/
+          .blend{
+            background-color: red;
+            background-size: cover;
+            background-image: url('image/spring.jpg');
+            background-blend-mode: difference;
+          }
+          .blend:hover{
+            background-color: white;
+            transition:background-color 3s;
+          }
+          /*background blend*/
+
+</style>
+
+</head>
+<body>
+ <div class="container">
+    <header>
+      <h1><a href="index.html" title="Go to Blackswan Home"style="text-decoration:none" id="a">
+          Black Swan</a></h1>
+    </header>
+
+  <section class="content">
+    <nav>
+    <ul>
+      <li>H1,strong</li>
+      <li>img</li>
+      <li>form</li>
+      <li>form select, multiple option</li>
+      <li>button</li>
+      <li>hidden</li>
+      <li>label,check box</li>
+      <li>method</li>
+      <li>file upload</li>
+      <li>video</li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+    <!--h1,strong-->
+      <h1>오늘의 명언</h1>
+      우리는 모두 <strong>자신의 힘</strong>으로 발견한 내용을 가장
+      쉽게 익힌다.
+    </article>
+
+    <article>
+    <!--img-->
+    <img src="image/spring.jpg" height="300" alt="봄이미지">
+    </article>
+
+    <article>
+    <!--form-->
+    <form action="http://localhost/login.php">
+      <p>ID:<input type="text" name="id"></P>
+      <p>PW:<input type="password" name="pwd"></p>
+      <p>texttype:<textarea name="textarea" id="textarea" cols="20" rows="3"></textarea></p>
+      <input type="submit" value="submit">
+    </form>
+    </article>
+
+    <article>
+    <!--form select, multiple option-->
+    <form action="http://localhost/color.php">
+    <h1>색상</h1>
+    <select name="color" id="color">
+    <option value="red">붉은색</option>
+    <option value="blue">파란색</option>
+    <option value="yellow">노란색</option>
+    </select>
+    </form>
+    </article>
+
+    <article>
+    <!--button-->
+    <form action="http://localhost/form.php">
+            <input type="text">
+            <input type="submit" value="전송">
+            <input type="button" value="버튼" onclick="alert('hello world')">
+            <input type="reset">
+        </form>
+    </article>
+
+    <article>
+    <!--hidden-->
+    <form action="http://localhost/hidden.php">
+               <input type="text" name="id">
+               <input type="hidden" name="hide" value="myalice">
+               <input type="submit">
+           </form>
+    </article>
+
+    <article>
+    <!--label,check box-->
+    <form action="">
+    <p>
+      <label for="password">password:</label>
+      <input id="id_txt" type="password" name="pwd" value="default value">
+    </p>
+    <p>
+      <label>
+       <input type="checkbox" name="color" value="red">붉은색
+     </label>
+    </p>
+    </form>
+    </article>
+
+    <article>
+    <!--method-->
+    <form action="http://localhost/method.php" method="post">
+               <input type="text" name="id">
+               <input type="password" name="pwd">
+               <input type="submit" value="submit">
+           </form>
+    </article>
+
+    <article>
+    <!--file upload-->
+    <form action="http://localhost/upload.php" method="post"
+          enctype="multipart/form-data">
+                <input type="file" name="profile">
+                <input type="submit"value="submit">
+            </form>
+    </article>
+
+    <!--video<html5부터 적용>-->
+    <article>
+      <video width="400" controls>
+        <source src="videos/small.mp4">
+        <source src="videos/small.ogv">
+      </video>
+    </article>
+  </main>
+  <!-- <aside>
+    AD
+  </aside> -->
+  </section>
+   <div class="blend">
+    <footer>
+      <UL>
+        <li><a href="privacy.html">개인보호정책</a></li>
+        <li><a href="about.html">회사소개</li>
+      </UL>
+    </footer>
+  </div>
+ </div>
+</body>
+</html>
